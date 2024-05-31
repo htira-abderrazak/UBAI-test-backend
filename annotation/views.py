@@ -28,7 +28,7 @@ class Annotate(APIView):
         return Response( response)
 
 
-
+#this task must excute in background with celery for more performence
 def annotate_text(text, labels, threshold=0.5):
     doc = nlp(text)
     label_tokens = {label: nlp(label)[0] for label in labels}
