@@ -21,7 +21,6 @@ class Annotate(APIView):
         
         
         
-        print(labels)
         annotations = annotate_text(text, labels)
         response={"document": text, "annotations": annotations}
         
